@@ -18,5 +18,18 @@ public class Main {
             animals[i].eat();
             System.out.println("-----------------------------------");
         }
+
+        Dolphin dolph = new Dolphin("Delfino Solitario");
+        makeSwim(dolph);
+        Eagle eagle = new Eagle("MyBrother");
+        makeFly(eagle);
+    }
+
+    static void makeFly(IVolante animal){
+        animal.fly();
+    }
+
+    static void makeSwim(INuotante animal){
+        animal.swim();
     }
 }

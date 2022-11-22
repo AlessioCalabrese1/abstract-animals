@@ -1,6 +1,6 @@
 package generation.italy.animals;
 
-public class Eagle extends Animal{
+public class Eagle extends Animal implements IVolante{
     public Eagle(String name){
         category = "Aquila";
         this.name = name;
@@ -15,5 +15,10 @@ public class Eagle extends Animal{
     @Override
     public void eat() {
         System.out.println("I can't tell");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("I CAN FLY!");
     }
 }
