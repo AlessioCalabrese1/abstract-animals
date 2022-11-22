@@ -2,7 +2,21 @@ package generation.italy.animals;
 
 public class Main {
     public static void main(String[] args) {
-        Dog bastardino = new Dog();
-        bastardino.sleep();
+        Animal[] animals = new Animal[4];
+
+        animals[0] = new Dog("Bastardino");
+        animals[1] = new Dolphin("Dolphin il delfino");
+        animals[2] = new Eagle("America");
+        animals[3] = new LittleSparrow("Jack");
+
+        for (int i = 0; i < animals.length; i++) {
+            System.out.println("Category: " + animals[i].getCategory());
+            System.out.println("Name: " + animals[i].getName());
+            System.out.printf("Animal Call: ");
+            animals[i].animalCall();
+            System.out.printf("What eat: ");
+            animals[i].eat();
+            System.out.println("-----------------------------------");
+        }
     }
 }
